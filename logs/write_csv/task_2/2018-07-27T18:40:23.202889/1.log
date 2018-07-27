@@ -1,0 +1,21 @@
+[2018-07-27 14:40:48,676] {cli.py:374} INFO - Running on host pinns-mbp.air.org
+[2018-07-27 14:40:48,696] {models.py:1197} INFO - Dependencies all met for <TaskInstance: write_csv.task_2 2018-07-27 18:40:23.202889 [queued]>
+[2018-07-27 14:40:48,699] {models.py:1197} INFO - Dependencies all met for <TaskInstance: write_csv.task_2 2018-07-27 18:40:23.202889 [queued]>
+[2018-07-27 14:40:48,699] {models.py:1407} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 1
+--------------------------------------------------------------------------------
+
+[2018-07-27 14:40:48,704] {models.py:1428} INFO - Executing <Task(BashOperator): task_2> on 2018-07-27 18:40:23.202889
+[2018-07-27 14:40:48,705] {base_task_runner.py:115} INFO - Running: ['bash', '-c', 'airflow run write_csv task_2 2018-07-27T18:40:23.202889 --job_id 10 --raw -sd DAGS_FOLDER/af_test.py']
+[2018-07-27 14:40:49,200] {base_task_runner.py:98} INFO - Subtask: [2018-07-27 14:40:49,200] {__init__.py:45} INFO - Using executor SequentialExecutor
+[2018-07-27 14:40:49,267] {base_task_runner.py:98} INFO - Subtask: [2018-07-27 14:40:49,267] {models.py:189} INFO - Filling up the DagBag from /Users/pinnzhang/Documents/airflow_test/dags/af_test.py
+[2018-07-27 14:40:49,327] {cli.py:374} INFO - Running on host pinns-mbp.air.org
+[2018-07-27 14:40:49,338] {base_task_runner.py:98} INFO - Subtask: [2018-07-27 14:40:49,337] {bash_operator.py:70} INFO - Tmp dir root location: 
+[2018-07-27 14:40:49,338] {base_task_runner.py:98} INFO - Subtask:  /var/folders/c7/gjth07cn7tgg_9q9d91qyk9h0000gn/T
+[2018-07-27 14:40:49,339] {base_task_runner.py:98} INFO - Subtask: [2018-07-27 14:40:49,338] {bash_operator.py:80} INFO - Temporary script location: /var/folders/c7/gjth07cn7tgg_9q9d91qyk9h0000gn/T/airflowtmpq7v9471h//var/folders/c7/gjth07cn7tgg_9q9d91qyk9h0000gn/T/airflowtmpq7v9471h/task_299i2faa1
+[2018-07-27 14:40:49,339] {base_task_runner.py:98} INFO - Subtask: [2018-07-27 14:40:49,339] {bash_operator.py:88} INFO - Running command: python3 /Users/pinnzhang/Documents/airflow_test/tasks/test_2.py
+[2018-07-27 14:40:49,343] {base_task_runner.py:98} INFO - Subtask: [2018-07-27 14:40:49,343] {bash_operator.py:97} INFO - Output:
+[2018-07-27 14:40:50,064] {base_task_runner.py:98} INFO - Subtask: [2018-07-27 14:40:50,063] {bash_operator.py:105} INFO - Command exited with return code 0
+[2018-07-27 14:40:50,075] {base_task_runner.py:98} INFO - Subtask: /Users/pinnzhang/anaconda3/lib/python3.6/site-packages/airflow/utils/helpers.py:351: DeprecationWarning: Importing BashOperator directly from <module 'airflow.operators' from '/Users/pinnzhang/anaconda3/lib/python3.6/site-packages/airflow/operators/__init__.py'> has been deprecated. Please import from '<module 'airflow.operators' from '/Users/pinnzhang/anaconda3/lib/python3.6/site-packages/airflow/operators/__init__.py'>.[operator_module]' instead. Support for direct imports will be dropped entirely in Airflow 2.0.
+[2018-07-27 14:40:50,075] {base_task_runner.py:98} INFO - Subtask:   DeprecationWarning)
