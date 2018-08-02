@@ -7,4 +7,4 @@ data = {"name" : "Luke",
         "City" : "D.C",
         "Age": 25}
 df = pd.DataFrame([data], columns = data.keys())
-df.to_csv("/Users/pinnzhang/Documents/airflow_test/tasks/Luke.csv")
+df.to_csv("/Users/pinnzhang/Documents/airflow_tutorial/tasks/Luke.csv")

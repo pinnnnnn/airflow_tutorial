@@ -1,0 +1,52 @@
+[2018-08-02 15:28:30,569] {cli.py:374} INFO - Running on host pinns-mbp.air.org
+[2018-08-02 15:28:30,587] {models.py:1197} INFO - Dependencies all met for <TaskInstance: write_csv.task_1 2018-08-02 19:28:14.791752 [queued]>
+[2018-08-02 15:28:30,589] {models.py:1197} INFO - Dependencies all met for <TaskInstance: write_csv.task_1 2018-08-02 19:28:14.791752 [queued]>
+[2018-08-02 15:28:30,589] {models.py:1407} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 1
+--------------------------------------------------------------------------------
+
+[2018-08-02 15:28:30,595] {models.py:1428} INFO - Executing <Task(BashOperator): task_1> on 2018-08-02 19:28:14.791752
+[2018-08-02 15:28:30,595] {base_task_runner.py:115} INFO - Running: ['bash', '-c', 'airflow run write_csv task_1 2018-08-02T19:28:14.791752 --job_id 4 --raw -sd DAGS_FOLDER/csv_writer.py']
+[2018-08-02 15:28:31,162] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:31,162] {__init__.py:45} INFO - Using executor SequentialExecutor
+[2018-08-02 15:28:31,253] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:31,252] {models.py:189} INFO - Filling up the DagBag from /Users/pinnzhang/Documents/airflow_tutorial/dags/csv_writer.py
+[2018-08-02 15:28:31,330] {cli.py:374} INFO - Running on host pinns-mbp.air.org
+[2018-08-02 15:28:31,348] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:31,348] {bash_operator.py:70} INFO - Tmp dir root location: 
+[2018-08-02 15:28:31,348] {base_task_runner.py:98} INFO - Subtask:  /var/folders/c7/gjth07cn7tgg_9q9d91qyk9h0000gn/T
+[2018-08-02 15:28:31,349] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:31,349] {bash_operator.py:80} INFO - Temporary script location: /var/folders/c7/gjth07cn7tgg_9q9d91qyk9h0000gn/T/airflowtmp42ch_i5x//var/folders/c7/gjth07cn7tgg_9q9d91qyk9h0000gn/T/airflowtmp42ch_i5x/task_1js10jxje
+[2018-08-02 15:28:31,350] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:31,349] {bash_operator.py:88} INFO - Running command: python3 /Users/pinnzhang/Documents/airflow_tutorial/tasks/test_1.py
+[2018-08-02 15:28:31,358] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:31,357] {bash_operator.py:97} INFO - Output:
+[2018-08-02 15:28:32,155] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:32,155] {bash_operator.py:101} INFO - Traceback (most recent call last):
+[2018-08-02 15:28:32,155] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:32,155] {bash_operator.py:101} INFO - File "/Users/pinnzhang/Documents/airflow_tutorial/tasks/test_1.py", line 14, in <module>
+[2018-08-02 15:28:32,156] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:32,155] {bash_operator.py:101} INFO - df.to_csv("/Users/pinnzhang/Documents/airflow_test/tasks/Pinn.csv")
+[2018-08-02 15:28:32,156] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:32,155] {bash_operator.py:101} INFO - File "/Users/pinnzhang/anaconda3/lib/python3.6/site-packages/pandas/core/frame.py", line 1403, in to_csv
+[2018-08-02 15:28:32,156] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:32,155] {bash_operator.py:101} INFO - formatter.save()
+[2018-08-02 15:28:32,156] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:32,155] {bash_operator.py:101} INFO - File "/Users/pinnzhang/anaconda3/lib/python3.6/site-packages/pandas/io/formats/format.py", line 1577, in save
+[2018-08-02 15:28:32,156] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:32,155] {bash_operator.py:101} INFO - compression=self.compression)
+[2018-08-02 15:28:32,156] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:32,155] {bash_operator.py:101} INFO - File "/Users/pinnzhang/anaconda3/lib/python3.6/site-packages/pandas/io/common.py", line 385, in _get_handle
+[2018-08-02 15:28:32,156] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:32,155] {bash_operator.py:101} INFO - f = open(path_or_buf, mode, errors='replace')
+[2018-08-02 15:28:32,156] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:32,155] {bash_operator.py:101} INFO - FileNotFoundError: [Errno 2] No such file or directory: '/Users/pinnzhang/Documents/airflow_test/tasks/Pinn.csv'
+[2018-08-02 15:28:32,238] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:28:32,237] {bash_operator.py:105} INFO - Command exited with return code 1
+[2018-08-02 15:28:32,244] {models.py:1595} ERROR - Bash command failed
+Traceback (most recent call last):
+  File "/Users/pinnzhang/anaconda3/lib/python3.6/site-packages/airflow/models.py", line 1493, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/Users/pinnzhang/anaconda3/lib/python3.6/site-packages/airflow/operators/bash_operator.py", line 109, in execute
+    raise AirflowException("Bash command failed")
+airflow.exceptions.AirflowException: Bash command failed
+[2018-08-02 15:28:32,247] {models.py:1624} INFO - Marking task as FAILED.
+[2018-08-02 15:28:32,257] {models.py:1644} ERROR - Bash command failed
+[2018-08-02 15:28:32,258] {base_task_runner.py:98} INFO - Subtask: /Users/pinnzhang/anaconda3/lib/python3.6/site-packages/airflow/utils/helpers.py:351: DeprecationWarning: Importing BashOperator directly from <module 'airflow.operators' from '/Users/pinnzhang/anaconda3/lib/python3.6/site-packages/airflow/operators/__init__.py'> has been deprecated. Please import from '<module 'airflow.operators' from '/Users/pinnzhang/anaconda3/lib/python3.6/site-packages/airflow/operators/__init__.py'>.[operator_module]' instead. Support for direct imports will be dropped entirely in Airflow 2.0.
+[2018-08-02 15:28:32,258] {base_task_runner.py:98} INFO - Subtask:   DeprecationWarning)
+[2018-08-02 15:28:32,259] {base_task_runner.py:98} INFO - Subtask: Traceback (most recent call last):
+[2018-08-02 15:28:32,259] {base_task_runner.py:98} INFO - Subtask:   File "/Users/pinnzhang/anaconda3/bin/airflow", line 27, in <module>
+[2018-08-02 15:28:32,259] {base_task_runner.py:98} INFO - Subtask:     args.func(args)
+[2018-08-02 15:28:32,259] {base_task_runner.py:98} INFO - Subtask:   File "/Users/pinnzhang/anaconda3/lib/python3.6/site-packages/airflow/bin/cli.py", line 392, in run
+[2018-08-02 15:28:32,259] {base_task_runner.py:98} INFO - Subtask:     pool=args.pool,
+[2018-08-02 15:28:32,259] {base_task_runner.py:98} INFO - Subtask:   File "/Users/pinnzhang/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 50, in wrapper
+[2018-08-02 15:28:32,259] {base_task_runner.py:98} INFO - Subtask:     result = func(*args, **kwargs)
+[2018-08-02 15:28:32,259] {base_task_runner.py:98} INFO - Subtask:   File "/Users/pinnzhang/anaconda3/lib/python3.6/site-packages/airflow/models.py", line 1493, in _run_raw_task
+[2018-08-02 15:28:32,259] {base_task_runner.py:98} INFO - Subtask:     result = task_copy.execute(context=context)
+[2018-08-02 15:28:32,259] {base_task_runner.py:98} INFO - Subtask:   File "/Users/pinnzhang/anaconda3/lib/python3.6/site-packages/airflow/operators/bash_operator.py", line 109, in execute
+[2018-08-02 15:28:32,260] {base_task_runner.py:98} INFO - Subtask:     raise AirflowException("Bash command failed")
+[2018-08-02 15:28:32,260] {base_task_runner.py:98} INFO - Subtask: airflow.exceptions.AirflowException: Bash command failed

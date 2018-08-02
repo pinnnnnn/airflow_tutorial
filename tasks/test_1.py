@@ -11,4 +11,4 @@ df = pd.DataFrame([data], columns = data.keys())
 
 #out = "/out/"
 
-df.to_csv("/Users/pinnzhang/Documents/airflow_test/tasks/Pinn.csv")
+df.to_csv("/Users/pinnzhang/Documents/airflow_tutorial/tasks/Pinn.csv")

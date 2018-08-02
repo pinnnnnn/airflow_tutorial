@@ -1,0 +1,14 @@
+[2018-08-02 15:30:21,615] {cli.py:374} INFO - Running on host pinns-mbp.air.org
+[2018-08-02 15:30:21,637] {models.py:1197} INFO - Dependencies all met for <TaskInstance: hello_world.hello_task 2018-08-02 18:08:00 [queued]>
+[2018-08-02 15:30:21,641] {models.py:1197} INFO - Dependencies all met for <TaskInstance: hello_world.hello_task 2018-08-02 18:08:00 [queued]>
+[2018-08-02 15:30:21,641] {models.py:1407} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 1
+--------------------------------------------------------------------------------
+
+[2018-08-02 15:30:21,649] {models.py:1428} INFO - Executing <Task(PythonOperator): hello_task> on 2018-08-02 18:08:00
+[2018-08-02 15:30:21,650] {base_task_runner.py:115} INFO - Running: ['bash', '-c', 'airflow run hello_world hello_task 2018-08-02T18:08:00 --job_id 9 --raw -sd DAGS_FOLDER/hellow_world.py']
+[2018-08-02 15:30:22,206] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:30:22,206] {__init__.py:45} INFO - Using executor SequentialExecutor
+[2018-08-02 15:30:22,297] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:30:22,297] {models.py:189} INFO - Filling up the DagBag from /Users/pinnzhang/Documents/airflow_tutorial/dags/hellow_world.py
+[2018-08-02 15:30:22,362] {cli.py:374} INFO - Running on host pinns-mbp.air.org
+[2018-08-02 15:30:22,370] {base_task_runner.py:98} INFO - Subtask: [2018-08-02 15:30:22,370] {python_operator.py:90} INFO - Done. Returned value was: Hello world!
